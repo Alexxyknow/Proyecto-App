@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          
 
       - name: Instalar dependencias
         run: npm install
@@ -23,7 +22,10 @@ jobs:
       - name: Compilar SENSI 33
         run: npm run build
 
-      - name: Añadir Android
+      - name: Añadir plataforma Android
+        run: npx cap add android
+
+      - name: Sincronizar Capacitor
         run: npx cap sync android
 
       - name: Configurar Java
@@ -31,6 +33,9 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
+
+      - name: Dar permisos a Gradle
+        run: chmod +x android/gradlew
 
       - name: Generar APK
         working-directory: android
