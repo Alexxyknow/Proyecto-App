@@ -23,7 +23,7 @@ jobs:
       - name: Compilar SENSI 33
         run: npm run build
 
-      - name: Sincronizar Capacitor
+      - name: Añadir Android
         run: npx cap sync android
 
       - name: Configurar Java
