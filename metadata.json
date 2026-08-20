@@ -1,0 +1,6 @@
+{
+  "name": "SENSI 33",
+  "description": "Herramienta de entrenamiento, calibración y análisis para jugadores.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

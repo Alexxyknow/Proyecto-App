@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a080d" />
+      <stop offset="45%" stop-color="#120709" />
+      <stop offset="100%" stop-color="#07070a" />
+    </radialGradient>
+    <linearGradient id="redNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d55" />
+      <stop offset="50%" stop-color="#ff1e27" />
+      <stop offset="100%" stop-color="#a80007" />
+    </linearGradient>
+    <filter id="glowFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#bgGlow)" />
+
+  <!-- Center Gaming Emblem -->
+  <g transform="translate(540, 900)">
+    <!-- Outer radar rings -->
+    <circle cx="0" cy="0" r="280" fill="none" stroke="#ff1e27" stroke-width="4" stroke-opacity="0.25" stroke-dasharray="24 16" />
+    <circle cx="0" cy="0" r="210" fill="none" stroke="url(#redNeon)" stroke-width="8" filter="url(#glowFilter)" />
+    <circle cx="0" cy="0" r="120" fill="#ff1e27" fill-opacity="0.12" stroke="#ff1e27" stroke-width="4" />
+    <circle cx="0" cy="0" r="36" fill="url(#redNeon)" filter="url(#glowFilter)" />
+
+    <!-- Reticles -->
+    <line x1="0" y1="-340" x2="0" y2="-240" stroke="url(#redNeon)" stroke-width="10" stroke-linecap="round" />
+    <line x1="0" y1="240" x2="0" y2="340" stroke="url(#redNeon)" stroke-width="10" stroke-linecap="round" />
+    <line x1="-340" y1="0" x2="-240" y2="0" stroke="url(#redNeon)" stroke-width="10" stroke-linecap="round" />
+    <line x1="240" y1="0" x2="340" y2="0" stroke="url(#redNeon)" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Corner Brackets -->
+    <path d="M -180 -120 L -180 -180 L -120 -180" fill="none" stroke="#ff4d55" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 180 -120 L 180 -180 L 120 -180" fill="none" stroke="#ff4d55" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M -180 120 L -180 180 L -120 180" fill="none" stroke="#ff4d55" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 180 120 L 180 180 L 120 180" fill="none" stroke="#ff4d55" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Typography -->
+  <text x="540" y="1320" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-style="italic" font-size="76" fill="#ffffff" text-anchor="middle" letter-spacing="6">SENSI 33</text>
+  <text x="540" y="1380" font-family="system-ui, -apple-system, monospace" font-weight="700" font-size="24" fill="#ff4d55" text-anchor="middle" letter-spacing="4">GAMING SUITE &amp; CALIBRATION</text>
+  <text x="540" y="1800" font-family="system-ui, -apple-system, monospace" font-weight="500" font-size="20" fill="#71717a" text-anchor="middle" letter-spacing="2">v1.0.0 • PRO PERFORMANCE</text>
+</svg>
